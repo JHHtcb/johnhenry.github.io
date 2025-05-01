@@ -21,6 +21,47 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  nav {
+    background-color: #ffc62f; /* Vikings gold */
+    padding: 0.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #4f2683; /* Vikings purple */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
 /* Make the title white */
 header h1 {
   color: white;
@@ -74,7 +115,37 @@ header p {
     <p>Built with Love...!</p>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#personal">Personal</a></li>
+      <li><a href="#professional">Professional</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  
   <main>
+    <section id="personal">
+      <h2>Personal</h2>
+      <p>This is my personal story...</p>
+    </section>
+  
+    <section id="professional">
+      <h2>Professional</h2>
+      <p>Here's what I do professionally...</p>
+    </section>
+  
+    <section id="interests">
+      <h2>Interests</h2>
+      <p>Things I love: coding, football, travel...</p>
+    </section>
+  
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>You can reach me at <a href="mailto:johnhenryheeks@gmail.com">johnhenryheeks@gmail.com</a>.</p>
+    </section>
+    
     <section>
       <h2>About Me</h2>
       <p>Hi! I'm John Henry Heeks. I'm learning how to build an awesome website and share my work online with the world.</p>
@@ -87,13 +158,8 @@ header p {
         <li>Project 2 – TBD#2</li>
       </ul>
     </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>You can reach me at <a href="mailto:johnhenryheeks@gmail.com">johnhenryheeks@gmail.com</a>.</p>
-    </section>
-  </main>
-
+  </main> 
+    
   <footer>
     &copy; 2025 JHH
   </footer>
