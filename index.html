@@ -1,159 +1,181 @@
+<!-- Define the document type and language -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Set the character encoding and responsive viewport settings -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JHH's Website</title>
-  
+
+  <!-- Internal CSS styles for layout and design -->
   <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #ffffff;
-    color: #1a1a1a;
-  }
+    /* Base styling for the page */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #1a1a1a;
+    }
 
-  header {
-    background-color: #4f2683;
-    color: #ffc62f;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    /* Header styling: purple background and yellow text */
+    header {
+      background-color: #4f2683;
+      color: #ffc62f;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-  html {
-    scroll-behavior: smooth;
-  }
+    /* Smooth scrolling between sections */
+    html {
+      scroll-behavior: smooth;
+    }
 
-  section {
-    scroll-margin-top: 80px;
-  }
+    /* Add scroll offset so sections aren't hidden behind sticky nav */
+    section {
+      scroll-margin-top: 80px;
+    }
 
-  nav {
-    background-color: #ffc62f; /* Vikings gold */
-    padding: 0.5rem 1rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Navigation bar styling */
+    nav {
+      background-color: #ffc62f;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+    /* Unordered list styling in nav */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
 
+    /* Nav links styling */
+    nav a {
+      color: #4f2683;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
+    /* Hover effect for nav links */
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-nav a {
-  color: #4f2683; /* Vikings purple */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
+    /* Title inside header should be white */
+    header h1 {
+      color: white;
+    }
 
-nav a:hover {
-  text-decoration: underline;
-}
+    /* Subtitle (p tag) in header should remain yellow */
+    header p {
+      color: #ffc62f;
+    }
 
+    /* Main content container */
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
 
-/* Make the title white */
-header h1 {
-  color: white;
-  }
+    /* Styling for all sections */
+    section {
+      margin-bottom: 2rem;
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-left: 5px solid #4f2683;
+      border-radius: 8px;
+    }
 
-/* Keep the subtitle yellow */
-header p {
-  color: #ffc62f;
-  }
+    /* Headings color */
+    h1, h2 {
+      color: #4f2683;
+    }
 
-  main {
-    max-width: 800px;
-    margin: auto;
-    padding: 2rem;
-  }
+    /* Link styling within body */
+    a {
+      color: #4f2683;
+      text-decoration: none;
+    }
 
-  section {
-    margin-bottom: 2rem;
-    background-color: #f4f4f4;
-    padding: 1rem;
-    border-left: 5px solid #4f2683;
-    border-radius: 8px;
-  }
+    /* Hover state for links */
+    a:hover {
+      text-decoration: underline;
+    }
 
-  h1, h2 {
-    color: #4f2683;
-  }
-
-  a {
-    color: #4f2683;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ffc62f;
-    color: #4f2683;
-    font-weight: bold;
-  }
-</style>
-
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ffc62f;
+      color: #4f2683;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Website header -->
   <header>
     <h1>Welcome to My Very New and Very COOL Website</h1>
     <p>Built with Love...!</p>
   </header>
 
+  <!-- Navigation bar linking to internal sections -->
   <nav>
     <ul>
       <li><a href="#about">About JHH</a></li>
-	  <li><a href="#personal">Personal</a></li>
+      <li><a href="#personal">Personal</a></li>
       <li><a href="#professional">Professional</a></li>
       <li><a href="#interests">Interests</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-    
+  <!-- Main content of the website -->
   <main>
-  
+    <!-- About section -->
     <section id="about">
       <h2>About Me</h2>
       <p>Hi! I'm John Henry Heeks. I'm learning how to build an awesome website and share it online with the world.</p>
     </section>
-    
+
+    <!-- Personal section -->
     <section id="personal">
       <h2>Personal</h2>
       <p>This is my personal story...</p>
     </section>
-  
+
+    <!-- Professional section -->
     <section id="professional">
       <h2>Professional</h2>
       <p>Here's what I do professionally...</p>
     </section>
-  
+
+    <!-- Interests section -->
     <section id="interests">
       <h2>Interests</h2>
       <p>Things I love: coding, football, travel...</p>
     </section>
-  
+
+    <!-- Contact section -->
     <section id="contact">
-	<h2>Contact</h2>
-	<p>You can reach me at <a href="mailto:johnhenryheeks@gmail.com">johnhenryheeks@gmail.com</a>.</p>
-	<p>You can call or text me at (585) 202-0823 </p>
+      <h2>Contact</h2>
+      <p>You can reach me at <a href="mailto:johnhenryheeks@gmail.com">johnhenryheeks@gmail.com</a>.</p>
+      <p>You can call or text me at (585) 202-0823 </p>
     </section>
-    
+
+    <!-- Projects section -->
     <section>
       <h2>Projects</h2>
       <ul>
@@ -161,8 +183,9 @@ header p {
         <li>Project 2 – TBD#2</li>
       </ul>
     </section>
-  </main> 
-    
+  </main>
+
+  <!-- Website footer -->
   <footer>
     &copy; 2025 JHH
   </footer>
