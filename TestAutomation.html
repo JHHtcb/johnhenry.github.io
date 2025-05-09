@@ -1,3 +1,5 @@
+# Save the corrected HTML content to a downloadable file
+html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,18 +126,26 @@
 
         <fieldset style="margin-top: 1em;">
           <legend>Radio Buttons:</legend>
-          <input type="radio" id="radio1" name="radio-group" value="radio1" />
-          <label for="radio1">Radio 1</label><br />
-          <input type="radio" id="radio2" name="radio-group" value="radio2" />
-          <label for="radio2">Radio 2</label>
+          <div style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+            <input type="radio" id="radio1" name="radio-group" value="radio1" />
+            <label for="radio1">Radio 1</label>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5em;">
+            <input type="radio" id="radio2" name="radio-group" value="radio2" />
+            <label for="radio2">Radio 2</label>
+          </div>
         </fieldset>
 
         <fieldset style="margin-top: 1em;">
           <legend>Checkboxes:</legend>
-          <input type="checkbox" id="checkbox1" name="checkbox-group" value="checkbox1" />
-          <label for="checkbox1">Checkbox 1</label><br />
-          <input type="checkbox" id="checkbox2" name="checkbox-group" value="checkbox2" />
-          <label for="checkbox2">Checkbox 2</label>
+          <div style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+            <input type="checkbox" id="checkbox1" name="checkbox-group" value="checkbox1" />
+            <label for="checkbox1">Checkbox 1</label>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5em;">
+            <input type="checkbox" id="checkbox2" name="checkbox-group" value="checkbox2" />
+            <label for="checkbox2">Checkbox 2</label>
+          </div>
         </fieldset>
 
         <label for="file-upload" style="margin-top: 1em;">File Upload:</label>
@@ -214,6 +224,14 @@
   <section>
     <a href="professional.html">&larr; Back to JHH's Professional Page</a>
   </section>
-  
+
 </body>
 </html>
+"""
+
+# Save to file
+file_path = "/mnt/data/jhh_form_corrected.html"
+with open(file_path, "w") as file:
+    file.write(html_content)
+
+file_path
