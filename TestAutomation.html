@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Henry's Test Automation Practice Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 2em;
+    }
+    section {
+      margin-bottom: 2em;
+      background-color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+    }
+    input, select, textarea, button {
+      margin-top: 0.3em;
+      padding: 0.5em;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 2em;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 5px;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>John Henry's Test Automation Practice Page</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Form Elements</h2>
+      <form id="test-form">
+        <label for="text-input">Text Input:</label>
+        <div style="display: flex; gap: 0.5em; align-items: center;">
+          <input type="text" id="text-input" name="text-input" placeholder="Enter text here" />
+          <button type="button" onclick="document.getElementById('text-input').value = '';">Clear</button>
+        </div>
+
+        <label for="email-input">Email Input:</label>
+        <div style="display: flex; gap: 0.5em; align-items: center;">
+          <input type="email" id="email-input" name="email-input" placeholder="Enter email" />
+          <button type="button" onclick="document.getElementById('email-input').value = '';">Clear</button>
+        </div>
+
+        <label for="password-input">Password Input:</label>
+        <div style="display: flex; gap: 0.5em; align-items: center;">
+          <input type="password" id="password-input" name="password-input" placeholder="Enter password" />
+          <button type="button" onclick="document.getElementById('password-input').value = '';">Clear</button>
+        </div>
+
+        <label for="textarea">Textarea:</label>
+        <textarea id="textarea" name="textarea" rows="4" placeholder="Enter longer text here"></textarea>
+
+        <label for="dropdown">Dropdown:</label>
+        <select id="dropdown" name="dropdown">
+          <option value="">--Please choose an option--</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+
+        <label for="multi-select">Multi-Select:</label>
+        <select id="multi-select" name="multi-select" multiple size="3">
+          <option value="multi1">Multi 1</option>
+          <option value="multi2">Multi 2</option>
+          <option value="multi3">Multi 3</option>
+        </select>
+
+        <fieldset style="margin-top: 1em;">
+          <legend>Radio Buttons:</legend>
+          <input type="radio" id="radio1" name="radio-group" value="radio1" />
+          <label for="radio1">Radio 1</label><br />
+          <input type="radio" id="radio2" name="radio-group" value="radio2" />
+          <label for="radio2">Radio 2</label>
+        </fieldset>
+
+        <fieldset style="margin-top: 1em;">
+          <legend>Checkboxes:</legend>
+          <input type="checkbox" id="checkbox1" name="checkbox-group" value="checkbox1" />
+          <label for="checkbox1">Checkbox 1</label><br />
+          <input type="checkbox" id="checkbox2" name="checkbox-group" value="checkbox2" />
+          <label for="checkbox2">Checkbox 2</label>
+        </fieldset>
+
+        <label for="file-upload" style="margin-top: 1em;">File Upload:</label>
+        <input type="file" id="file-upload" name="file-upload" />
+
+        <button type="submit">Submit Form</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Buttons and Popups</h2>
+      <button id="alert-button">Show Alert</button>
+      <button id="confirm-button">Show Confirm</button>
+      <button id="prompt-button">Show Prompt</button>
+      <button id="modal-button">Show Modal</button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="close-modal">&times;</span>
+          <p>This is a modal popup for testing purposes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Other Elements</h2>
+      <label for="range-input">Range Input:</label>
+      <input type="range" id="range-input" name="range-input" min="0" max="100" />
+
+      <label for="color-input">Color Picker:</label>
+      <input type="color" id="color-input" name="color-input" />
+
+      <label for="date-input">Date Picker:</label>
+      <input type="date" id="date-input" name="date-input" />
+
+      <label for="time-input">Time Picker:</label>
+      <input type="time" id="time-input" name="time-input" />
+
+      <label for="datetime-input">Datetime Picker:</label>
+      <input type="datetime-local" id="datetime-input" name="datetime-input" />
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('alert-button').addEventListener('click', function() {
+      alert('This is an alert box!');
+    });
+
+    document.getElementById('confirm-button').addEventListener('click', function() {
+      confirm('Do you confirm this action?');
+    });
+
+    document.getElementById('prompt-button').addEventListener('click', function() {
+      prompt('Please enter your name:');
+    });
+
+    var modal = document.getElementById('modal');
+    var modalBtn = document.getElementById('modal-button');
+    var closeBtn = document.getElementById('close-modal');
+
+    modalBtn.addEventListener('click', function() {
+      modal.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
